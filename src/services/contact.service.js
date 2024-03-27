@@ -21,11 +21,11 @@ class ContactService{
         return (await this.api.get(`/${id}`)).data;
     }
     async update(id, data){
-        return (await this.api.put(`${id}`,data)).data;
+        return (await this.api.put(`/${id}`,data)).data;
     }
     async delete(id){
         return (await this.api.delete(`/${id}`)).data;
     }
 }
 
-export default ContactService()
+export default new ContactService();

@@ -13,8 +13,12 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  //Thuộc tính resolve cho phép bạn tùy chỉnh cách thức Vite giải quyết các import trong code của bạn.
   resolve: {
+    //Thuộc tính alias chứa 1 cặp key-value. Trong đó "@" là key ,còn "fileURLToPath(new URL('./src', import.meta.url))" là value
     alias: {
+      //hàm fileURLToPath():  được sử dụng để chuyển đổi một URL file thành một đường dẫn file trên hệ thống.
+      //Biến import.meta.url: chứa URL của module hiện tại đang được thực thi.
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
@@ -31,4 +35,5 @@ export default defineConfig({
     }
    }
   },
+  
 });

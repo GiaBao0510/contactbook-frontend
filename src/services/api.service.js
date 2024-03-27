@@ -3,7 +3,7 @@ import axios from "axios";
 const commonConfig = {
     headers:{
         "Content-Type":"application/json",
-        "Accept":"application/json",
+        Accept:"application/json",
     },
 };
 
@@ -14,4 +14,4 @@ export default (baseURL) => {
         baseURL,        //Thuộc tính thiết lập URL cơ sở cho các yêu cầu API.
         ...commonConfig, // Sử dụng toán tử spread để hợp nhất các thuộc tính từ đối tượng commonConfig vào cấu hình Axios.
     });
-}
+};

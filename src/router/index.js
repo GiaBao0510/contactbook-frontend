@@ -12,6 +12,22 @@ const routes = [
         path: "/:pathMatch(.*)*",
         name: "notFound",
         component: () => import("@/view/NotFound.vue"),
+    },
+
+    //Đường dẫn trang cập nhật
+    {
+        path:"/contacts/:id",
+        name:"contact.edit",
+        component: () => import("@/view/ContactEdit.vue"),
+        props: true     //Truyền các biến trong $route.params vào làm props
+    },
+
+    //Đường dẫn thêm liên lạc mới
+    {
+        path: "/contact/add",
+        name: "contact.add",
+        component: () => import("@/view/ContactAdd.vue"),
+        props: true,
     }
 ];
 

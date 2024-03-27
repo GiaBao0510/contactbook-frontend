@@ -1,9 +1,9 @@
 <script>
     export default {
         props:{
-            contact: {type: Object, required: true}
-        }
-    }
+            contact: {type: Object, required: true},
+        },
+    };
 </script>
 
 <template>
