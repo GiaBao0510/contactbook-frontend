@@ -20,5 +20,15 @@ export default defineConfig({
   },
   server:{
     post: 3001,
+    /*
+       Để không cần phải gán cứng hostname/ip của API server trong dự án thì cần phải hiệu chỉnh lại tệp tin này,
+      cấu hình proxy chuyển yêu cầu có URL chứa /api xuất phát từ ứng dụng VUE.
+    */
+   proxy:{
+    "/api":{
+      target: "http://localhost:3000/",
+      changeOrigin: true,
+    }
+   }
   },
 });
