@@ -3,10 +3,16 @@ import ContactBook from "@/view/ContactBook.vue";
 
 const routes = [
     {
-        path: '/',
-        name: 'contactBook',
+        path:"/",
+        name: "contactbook",
         component: ContactBook,
     },
+    //Trường hợp không tìm thấy trang
+    {
+        path: "/:pathMatch(.*)*",
+        name: "notFound",
+        component: () => import("@/view/NotFound.vue"),
+    }
 ];
 
 // hàm createRouter được cung cấp bởi Vue Router để tạo ra một router instance.
